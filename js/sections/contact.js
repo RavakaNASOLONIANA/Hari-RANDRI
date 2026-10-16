@@ -12,7 +12,7 @@
               >harigislene.randria@gmail.com</a
             ><a href="tel:+261341888053">+261 34 188 8053</a
             ><a
-              href="https://linkedin.com/in/hari-randria"
+              href="https://www.linkedin.com/in/hari-randria-b25a901b9/"
               target="_blank"
               rel="noopener"
               >LinkedIn</a
