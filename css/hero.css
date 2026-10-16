@@ -1,0 +1,188 @@
+/* Accueil (photo, texte, icônes) et animations */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: linear-gradient(
+    120deg,
+    var(--g1) 0%,
+    var(--g2) 55%,
+    var(--g3) 100%
+  );
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+.blob {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 380px);
+  aspect-ratio: 4/5;
+  animation:
+    rise 0.9s both,
+    float 6s ease-in-out 0.9s infinite alternate;
+}
+
+.blob::before {
+  content: "";
+  position: absolute;
+  inset: -14px 14px 14px -14px;
+  border-radius: 30px;
+  padding: 3px;
+  background: conic-gradient(
+    from var(--a),
+    var(--brown),
+    transparent 28%,
+    var(--acc),
+    transparent 66%,
+    var(--brown)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box exclude,
+    linear-gradient(#000 0 0);
+  animation: spin 4s linear infinite;
+}
+
+.blob img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 24px 50px rgba(110, 66, 15, 0.25);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+.txt > * {
+  animation: rise 0.8s both;
+}
+
+.txt > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.txt > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.txt > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.txt > *:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+
+.hero h1 em,
+.role b {
+  font-style: normal;
+  color: var(--brown);
+  text-shadow: 0 0 22px rgba(168, 102, 28, 0.5);
+}
+
+.role {
+  font-size: clamp(1.5rem, 3vw, 2.1rem) !important;
+  font-weight: 600 !important;
+  margin: 6px 0 18px !important;
+  min-height: 1.3em;
+}
+
+.role b {
+  border-right: 3px solid var(--brown);
+  padding-right: 4px;
+}
+
+.hero p {
+  max-width: 46ch;
+  margin: 0 0 24px;
+  color: var(--text);
+}
+
+.social {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.social a {
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid var(--brown);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--brown);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+
+.social a:hover {
+  background: var(--brown);
+  color: var(--btn-ink);
+  transform: translateY(-3px);
+}
+
+.social svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social a:active,
+.social a.clicked {
+  background: var(--c, var(--brown));
+  border-color: var(--c, var(--brown));
+  color: #fff;
+}
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  to {
+    --a: 360deg;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(14px);
+  }
+  to {
+    transform: translateY(-16px);
+  }
+}

@@ -1,0 +1,41 @@
+/* Missions principales */
+
+.miss {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  counter-reset: m;
+}
+
+.miss li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.miss li:hover {
+  transform: translateY(-4px);
+  border-color: var(--acc);
+}
+
+.miss span {
+  font:
+    700 1.7rem/1 Poppins,
+    sans-serif;
+  color: var(--acc);
+  min-width: 2ch;
+}
+
+.miss p {
+  margin: 0;
+}

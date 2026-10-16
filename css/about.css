@@ -1,0 +1,28 @@
+/* À propos */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.about p {
+  margin: 0 0 16px;
+}
+
+.facts {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.fact {
+  padding-left: 20px;
+  border-left: 3px solid var(--acc);
+}
+
+.fact b {
+  display: block;
+  color: var(--brown);
+  font-weight: 600;
+}

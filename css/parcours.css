@@ -1,0 +1,59 @@
+/* Parcours et formation */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 30px;
+  border-left: 2px solid var(--acc);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 34px 8px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--card);
+  border: 3px solid var(--acc);
+}
+
+.timeline time {
+  color: var(--acc);
+  font-weight: 500;
+}
+
+.timeline h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2px 0;
+  color: var(--brown);
+}
+
+.timeline span {
+  color: var(--muted);
+}
+
+.edu {
+  margin-top: 12px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--acc);
+  border-radius: 18px;
+  padding: 24px 28px;
+}
+
+.edu h3 {
+  color: var(--brown);
+  margin-bottom: 10px;
+}
+
+.edu p {
+  margin: 0 0 10px;
+}

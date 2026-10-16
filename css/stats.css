@@ -1,0 +1,25 @@
+/* Chiffres clés */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 52px 24px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat b {
+  display: block;
+  font:
+    700 2.8rem/1.1 Poppins,
+    sans-serif;
+  color: var(--brown);
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

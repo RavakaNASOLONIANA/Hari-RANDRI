@@ -1,0 +1,41 @@
+/* Contact et pied de page */
+
+.contact {
+  background: linear-gradient(120deg, var(--g2), var(--g3));
+  text-align: center;
+}
+
+.contact .lead {
+  margin-inline: auto;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.links a {
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--brown);
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.links a:hover {
+  background: var(--brown);
+  color: var(--btn-ink);
+}
+
+footer {
+  text-align: center;
+  padding: 28px 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
